@@ -15,6 +15,7 @@
             
             body {
                 font-family: 'Montserrat Alternates', sans-serif;
+                font-weight: 300;
                 line-height: 1.5;
                 background-color: white;
                 width: 1920px;
@@ -70,6 +71,31 @@
                 width: 100%;
             }
 
+            .title, .title-2 {
+                font-weight: 400;
+                font-size: 36px;
+                color: black;
+                text-align: center;
+                margin: 60px 0 30px;
+                text-transform: uppercase;
+                padding-top: 30px;
+            }
+
+            .gallery_d {
+                gap: 20px;
+                overflow-x: auto;
+                display: flex;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .gallery_d img {
+                min-width: 352px;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 24px;
+            }
+
             .text-forma {
                 font-weight: 400;
                 font-size: 24px;
@@ -101,7 +127,7 @@
                 justify-content: space-between;
             }
 
-            .btn-res {
+            .btn-reg {
                 border-color: #918474;
                 background-color: white;
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -110,21 +136,21 @@
                 border-radius: 12px;
                 font-size: 15px;
                 padding: 0 20px;
-                margin-bottom: 10px;
+                margin-bottom: 30px;
                 font-weight: 300;
                 width: 100%;
-                margin-top: 75px;
+                margin-top: 35px;
                 transition: all 0.3s ease;
                 font-family: 'Montserrat Alternates', sans-serif;
                 letter-spacing: 3%;
             }
 
-            .btn-res:hover {
+            .btn-reg:hover {
                 background-color: #775248;
                 color: white;
             }
 
-            .btn-res:active {
+            .btn-reg:active {
                 background-color: #979797;
                 transform: translateY(1px);
             }
@@ -134,8 +160,6 @@
                 padding: 50px 60px;
                 text-align: center;
                 background-color: white;
-                width: 1200px;
-                height: 800;
                 margin: 0 auto;
             }
 
@@ -239,8 +263,8 @@
                     <ul>
                         <li><a href="menu_main.html">Меню</a></li>
                         <li><a href="cart_null.html">Корзина</a></li>
-                        <li><a href="#">Бронирование</a></li>
-                        <li><a href="dinner.html">Гастроужины</a></li>
+                        <li><a href="reservation_bootstrap.html">Бронирование</a></li>
+                        <li><a href="#">Гастроужины</a></li>
                     </ul>
                 </nav>
             </div>
@@ -249,34 +273,28 @@
             </a>   
         </header>
         <main class="container">
+            <h1 class="title">гастроужин eonia</h1>
+            <div class="d-flex flex-column align-items-center mb-5 w-100">
+                <p class="text-justify" style="font-weight: 300; font-size: 24px; color: black; line-height: 1.6; padding-top: 20px;">
+                    Тематический ужин, посвященный греческой кухне. Шеф-повар представит специальное меню из пяти блюд с авторской интерпретацией классических рецептов.<br><br>
+                    Каждое блюдо сопровождается комментарием сомелье о сочетании с греческими винами. Мероприятие проходит в формате неформального общения с шеф-поваром.
+                </p>
+            </div>
+            <div class="gallery_d">
+                <img src="/img/d_1.png" alt="Фото интерьера">
+                <img src="/img/d_2.png" alt="Фото интерьера">
+                <img src="/img/d_3.png" alt="Фото интерьера">
+                <img src="/img/d_4.png" alt="Фото интерьера">
+            </div>
+            <h1 class="title-2">регистрация</h1>
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-8 col-xl-6">
-                    <form id="resForm">
+                <div class="col-12 col-lg-8 col-xl-8">
+                    <form id="dinnerForm">
                         <div class="row space gy-0">
-                            <div class="col-12 col-md-5">
-                                <label class="text-forma">Дата</label>
-                                <input type="date" class="form-control type" id="dateInput" required>
-                            </div>
-                            <div class="col-12 col-md-5">
-                                <label class="text-forma">Время</label>
-                                <input class="form-control type" list="time_options" id="timeInput" placeholder="Выберите время" required>
-                                <datalist id="time_options">
-                                    <option value="12:00">
-                                    <option value="13:00">
-                                    <option value="14:00">
-                                    <option value="15:00">
-                                    <option value="16:00">
-                                    <option value="17:00">
-                                    <option value="18:00">
-                                    <option value="19:00">
-                                    <option value="20:00">
-                                    <option value="21:00">
-                                </datalist>
-                            </div>
-                            <div class="col-12 col-md-5">
+                            <div class="col-12 col-md-4">
                                 <label class="text-forma">Гости</label>
-                                <input class="form-control type" list="g_options" id="guestsInput" placeholder="Укажите количество" required>
-                                <datalist id="g_options">
+                                <input class="form-control type" list="guests_options" id="guestsInput" placeholder="Укажите количество" required>
+                                <datalist id="guests_options">
                                     <option value="1">
                                     <option value="2">
                                     <option value="3">
@@ -290,18 +308,20 @@
                                     <option value="10+">
                                 </datalist>
                             </div>
-                            <div class="col-12 col-md-5">
+                            <div class="col-12 col-md-4">
                                 <label class="text-forma">Имя</label>
                                 <input type="text" class="form-control type" id="nameInput" placeholder="Введите имя" required>
                             </div>
-                            <div class="col-12 col-md-5">
+                            <div class="col-12 col-md-4">
                                 <label class="text-forma">Телефон</label>
                                 <input type="tel" class="form-control type" id="phoneInput" placeholder="Введите номер" required>
                             </div>
-                            <div class="col-12 col-md-5">
-                                <button type="button" class="btn-res" id="reserveBtn" data-bs-toggle="modal" data-bs-target="#resModal">
-                                    Забронировать
-                                </button>
+                            <div class="col-12 mt-4">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn-reg w-50" id="registerBtn" data-bs-toggle="modal" data-bs-target="#dinnerModal">
+                                        Зарегистрироваться
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -326,7 +346,7 @@
                 </div>
             </div>    
         </footer>
-        <div class="modal fade" id="resModal" tabindex="-1" aria-labelledby="resModalLabel" aria-hidden="true">
+        <div class="modal fade" id="dinnerModal" tabindex="-1" aria-labelledby="dinnerModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -336,46 +356,31 @@
                         <div class="modal-img">
                             <img src="img/modal.png" alt="Бронирование" id="modalImage">
                         </div>
-                        
                         <div class="modal-text">
-                            Вы забронировали стол на <span class="highlight" id="modalDate">...</span>
-                        </div>
-                        <div class="modal-text">
-                            в <span class="highlight" id="modalTime">...</span>
+                            <span class="highlight" id="modalName">...</span>, вы успешно зарегистрированы на гастроужин!
                         </div>
                         
                         <div class="modal-footer">
-                            Наш администратор свяжется с вами
+                            Наш администратор свяжется с вами для подтверждения
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                const form = document.getElementById('resForm');
-                const reserveBtn = document.getElementById('reserveBtn');
-                const dateInput = document.getElementById('dateInput');
-                const timeInput = document.getElementById('timeInput');
+                const form = document.getElementById('dinnerForm');
+                const registerBtn = document.getElementById('registerBtn');
                 const nameInput = document.getElementById('nameInput');
                 const guestsInput = document.getElementById('guestsInput');
                 const phoneInput = document.getElementById('phoneInput');
                 
-                const modalDate = document.getElementById('modalDate');
-                const modalTime = document.getElementById('modalTime');
+                const modalName = document.getElementById('modalName');
+                const modalGuests = document.getElementById('modalGuests');
                 const modalImage = document.getElementById('modalImage');
                 
-                const modal = new bootstrap.Modal(document.getElementById('resModal'));
-
-                function formatDate(dateString) {
-                    const date = new Date(dateString);
-                    const day = date.getDate().toString().padStart(2, '0');
-                    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-                    const year = date.getFullYear();
-                    return `${day}.${month}.${year}`;
-                }
+                const modal = new bootstrap.Modal(document.getElementById('dinnerModal'));
 
                 function validateName(name) {
                     const regex = /^[A-Za-zА-Яа-яЁё\s\-]+$/;
@@ -387,14 +392,17 @@
                     return regex.test(phone) && phone.replace(/\D/g, '').length >= 10;
                 }
 
-
                 function checkForm() {
-                    const inputs = [dateInput, timeInput, guestsInput, nameInput, phoneInput];
+                    const inputs = [nameInput, guestsInput, phoneInput];
                     let allValid = true;
+                    let errorMessage = '';
                     
                     inputs.forEach(input => {
                         if (!input.value.trim()) {
                             allValid = false;
+                            input.style.borderColor = 'red';
+                        } else {
+                            input.style.borderColor = '#918474';
                         }
                     });
                     
@@ -402,77 +410,61 @@
                         allValid = false;
                         errorMessage = 'Имя может содержать только буквы, пробелы и дефисы';
                         nameInput.style.borderColor = 'red';
-                    } else {
+                    } else if (nameInput.value.trim()) {
                         nameInput.style.borderColor = '#918474';
                     }
 
                     if (phoneInput.value.trim() && !validatePhone(phoneInput.value.trim())) {
                         allValid = false;
                         errorMessage = 'Введите корректный номер телефона (минимум 10 цифр)';
+                        phoneInput.style.borderColor = 'red';
+                    } else if (phoneInput.value.trim()) {
+                        phoneInput.style.borderColor = '#918474';
                     }
 
-                    if (dateInput.value) {
-                        const selectedDate = new Date(dateInput.value);
-                        const today = new Date();
-                        today.setHours(0, 0, 0, 0);
-            
-                        if (selectedDate < today) {
-                            allValid = false;
-                            errorMessage = 'Нельзя выбрать прошедшую дату';
-                            dateInput.style.borderColor = 'red';
-                        } else {
-                            dateInput.style.borderColor = '#918474';
-                        }
-                    }
-
-                    reserveBtn.disabled = !allValid;
+                    registerBtn.disabled = !allValid;
                     
                     if (allValid) {
-                        reserveBtn.setAttribute('data-bs-toggle', 'modal');
-                        reserveBtn.setAttribute('data-bs-target', '#resModal');
+                        registerBtn.setAttribute('data-bs-toggle', 'modal');
+                        registerBtn.setAttribute('data-bs-target', '#dinnerModal');
                     } else {
-                        reserveBtn.removeAttribute('data-bs-toggle');
-                        reserveBtn.removeAttribute('data-bs-target');
+                        registerBtn.removeAttribute('data-bs-toggle');
+                        registerBtn.removeAttribute('data-bs-target');
                     }
                     
                     return allValid;
                 }
 
                 function fillModal() {
-                    const date = dateInput.value;
-                    const time = timeInput.value;
+                    const name = nameInput.value.trim();
+                    const guests = guestsInput.value.trim();
                     
-                    if (date && time) {
-                        modalDate.textContent = formatDate(date);
-                        modalTime.textContent = time;
+                    if (name && guests) {
+                        modalName.textContent = `${name}`;
+                        modalGuests.textContent = guests;
                         modalImage.src = 'img/modal.png';
                         return true;
                     }
                     return false;
                 }
 
-                reserveBtn.addEventListener('click', function(e) {
+                registerBtn.addEventListener('click', function(e) {
                     if (!checkForm()) {
                         e.preventDefault();
-                        alert('Заполните все поля');
+                        alert('Заполните все поля корректно');
                         return;
                     }
                     
                     fillModal();
                 });
-
-                const today = new Date().toISOString().split('T')[0];
-                dateInput.min = today;
-                
                 
                 form.addEventListener('input', checkForm);
                 form.addEventListener('change', checkForm);
 
                 checkForm();
                 
-                document.getElementById('resModal').addEventListener('hidden.bs.modal', function() {
+                document.getElementById('dinnerModal').addEventListener('hidden.bs.modal', function() {
                     form.reset();
-                    dateInput.value = new Date().toISOString().split('T')[0];
                     checkForm();
                 });
             });
