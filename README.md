@@ -1,4 +1,4 @@
-# final-website-Asnnyy
-final-website-Asnnyy created by GitHub Classroom
+# Ярмолаш Софья Николаевна, 3-МД-8, 2025 год
+
 https://www.figma.com/design/QKkzzkjTKvvhkLRBnJZPop/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0-4-6?node-id=0-1&t=3F9Y6zU8wAicstQ3-1 - прототип 1
 https://www.figma.com/design/bpZgvWezS4GueYu6tuzUAq/Untitled?node-id=0-1&t=st9YzrXC7CahUD2f-1 - прототип 2
