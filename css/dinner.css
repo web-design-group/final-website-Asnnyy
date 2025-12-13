@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color: white;
+    width: 1920px;
+    max-width: 100%;
+}
+
+.header {
+    background-image: url('./img/header.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+}
+
+.bg {
+    width: 80%;
+    max-width: 1200px;
+    height: 80px;
+    margin: 6px 0;
+    background-color: rgba(255, 255, 255, 0.263);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 32px;
+}
+
+.top ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+}
+
+.top a {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.top a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.logo_l {
+    width: 100%;
+}
+
+.title, .title-2 {
+    font-weight: 400;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin: 60px 0 30px;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+.gallery_d {
+    gap: 20px;
+    overflow-x: auto;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.gallery_d img {
+    min-width: 352px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.text-forma {
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.type {
+    height: 60px;
+    border: 1.5px solid #918474;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
+    letter-spacing: 6%;
+    border-color: #918474;
+    box-shadow: inset 4px 5px 8.4px 3px rgba(0, 0, 0, 0.13);
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-reg {
+    border-color: #918474;
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1.5px solid #918474;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    width: 100%;
+    margin-top: 35px;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat Alternates', sans-serif;
+    letter-spacing: 3%;
+}
+
+.btn-reg:hover {
+    background-color: #775248;
+    color: white;
+}
+
+.btn-reg:active {
+    background-color: #979797;
+    transform: translateY(1px);
+}
+
+.modal-content {
+    border-radius: 24px;
+    padding: 50px 60px;
+    text-align: center;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 0;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #918474;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-body {
+    padding: 0;
+    text-align: center;
+}
+
+.modal-img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-text {
+    font-size: 28px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.modal-footer {
+    font-size: 28px;
+    color: black;
+    margin-top: 25px;
+    font-weight: 400;
+}
+
+.highlight {
+    font-weight: 400;
+}
+
+.footer {
+    background: #918474;
+    padding: 80px 40px;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_c {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact, .hours {
+    display: flex;
+    flex-direction: column;
+}
+p {
+    font-weight: 300;
+    font-size: 24px;
+    color: black;
+    padding-bottom: 20px;
+    letter-spacing: 3%;
+}
